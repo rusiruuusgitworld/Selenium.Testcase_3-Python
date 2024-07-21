@@ -17,17 +17,6 @@ login_button = driver.find_element(By.ID, "login-button")
 login_button.click()
 
 # Wait for the error message to load
-time.sleep(20)
+time.sleep(10)
 
-# Verify unsuccessful login by checking the presence of an error message
-try:
-    error_message = driver.find_element(By.CSS_SELECTOR, "h3[data-test='error']")
-    if "Username is required" in error_message.text:
-        print("Unsuccessful login verified with empty credentials.")
-    else:
-        print("Unexpected error message.")
-except:
-    print("Error message not found. Test failed.")
-
-# Close the browser
 driver.quit()

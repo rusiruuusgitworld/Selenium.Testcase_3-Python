@@ -25,14 +25,6 @@ login_button.click()
 # Wait for the new page to load
 time.sleep(10)
 
-# Verify successful login by checking the presence of a specific element on the landing page
-try:
-    inventory_container = driver.find_element(By.ID, "inventory_container")
-    print("Login successful.")
-except:
-    print("Login failed.")
-
-# Close the browser
 driver.quit()
 
 

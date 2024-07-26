@@ -34,7 +34,7 @@ try:
     cart_icon = driver.find_element(By.ID, "shopping_cart_container")
     cart_icon.click()
 
-    # Wait for the cart page to load
+
     time.sleep(2)
 
     # Click the checkout button
@@ -57,16 +57,15 @@ try:
     # Click the continue button
     continue_button.click()
 
-    # Wait for the next page to load
+    
     time.sleep(2)
 
-    # Click the finish button to complete the checkout
+    # finish button to  checkout
     finish_button = driver.find_element(By.ID, "finish")
     finish_button.click()
 
-    # Wait for the success page to load
+    
     time.sleep(2)
 
 finally:
-    # Close the browser
     driver.quit()
